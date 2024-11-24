@@ -10,7 +10,7 @@ class IndexView(TemplateView):
 
 # APIs
 def api(index):
-    api_lst = {'ipgeolocation':'2b25320e3278417ca54b3a3bf803aba0', 'virusTotal': '6ea15cfd96aca709569af107ca3f3d98a898aa389ca2b3997d2082715b0ad64c', "gemini":'AIzaSyCZzd4JAFYQrXBeatXVGiJm9QWxx6OKLOE'}
+    api_lst = {'ipgeolocation':'Enter_Your_API', 'virusTotal': 'Enter_Your_API', "gemini":'Enter_Your_API'}
     return api_lst[index]
 
     # ip Geolocation

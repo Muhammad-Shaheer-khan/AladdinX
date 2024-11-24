@@ -1,0 +1,76 @@
+/* Blurring background */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Blur background */
+    z-index: 1000;
+  }
+  
+  /* Popup container */
+  .popup-content {
+    margin-top: -65px;
+    background-color: #1b1b1b;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 750px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+  }
+  
+  /* Field styling */
+  .popup-field {
+    margin-bottom: 15px;
+  }
+  
+  .close_button{
+    width: 500px;
+    height: 110px;
+    position: absolute;
+    right: 3%;
+    top: 15%;
+  }
+
+  .closeButton {
+    width: 52px;
+    height: 50px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  
+  .ai-button {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+  
+  .ai-button:hover {
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .clr-background {
+    background-color: rgba(66, 65, 65, 0.45);
+    padding: 10px;
+    border-radius: 5px;
+    color: white; /* Optional: make the text stand out */
+  }
+  

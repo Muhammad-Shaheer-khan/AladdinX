@@ -1,0 +1,506 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgb(67, 95, 232) 0%, rgba(252,70,107,1) 25%,  rgba(63,94,251,1) 50%, rgb(232, 78, 109) 100%);
+  background-size: 400% 400%;
+  animation: gradientAnimation 50s ease infinite;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Base styling for both windows */
+.window {
+  margin-top: -70px;
+  padding: 20px;
+  background: #262525;
+  border-radius: 15px;
+  width: 95%; /* Increased width for more space */
+  max-width: 800px; /* Optional: Increase max-width */
+  color: white;
+  text-align: center;
+  position: absolute; /* Fixes the position of the element */
+  left: 50%; /* Centers horizontally */
+  transform: translateX(-50%); /* Adjusts the position to the center horizontally */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* First window */
+.window {
+  top: 20%; /* Adjust the vertical position */
+}
+
+
+textarea {
+  width: 700px;
+  height: 200px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-inline-start: 10px;
+  margin-top: 33px;
+  border-radius: 8px;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-y: auto; /* Changed to auto to display scrollbar */
+  scrollbar-width: thin; /* Added to make scrollbar thinner */
+  scrollbar-color: #666 #ffffff; /* Added to change scrollbar color */
+  -ms-overflow-style: none;
+}
+
+/* Add styles for scrollbar */
+textarea::-webkit-scrollbar {
+  width: 10px;
+  background-color: #333;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: radial-gradient(circle, rgb(67, 95, 232) 0%, rgba(252, 70, 107, 1) 25%, rgba(63, 94, 251, 1) 50%, rgb(232, 78, 109) 100%);
+  background-size: 400% 400%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-position 0.5s ease, transform 0.3s ease, color 0.3s ease;
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+  width: 200px; /* Set a fixed width for the button */
+  height: 50px; /* Set a fixed height for the button */
+  overflow: hidden; /* Prevents image overflow */
+}
+
+button:hover {
+  background-position: 100% 0;
+  transform: scale(1.05);
+  color: black;
+}
+
+.lamp-img {
+  height: 28px; /* Adjust size as necessary */
+  margin-bottom: 10px;
+  vertical-align: middle;
+  position: relative;
+  right: 7px;
+}
+
+.notification {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+
+/* Second window */
+.window.parsed-data {
+  margin-top: 60px;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 90%; /* Ensure the table doesn't exceed 90% of the viewport width */
+  overflow: visible; /* Allow horizontal scrolling */
+  }
+  .spacer {
+    top: 5000px;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    transform: translateX(-50%);
+    max-width: 97%;
+    overflow: visible;
+    width: 100%;
+  }
+  
+.window.parsed-data table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.window.parsed-data .key {
+  width: 30%; /* Adjusted to ensure sufficient space for both columns */
+  word-break: break-word;
+  padding: 15px;
+  color: #fff;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.window.parsed-data .value {
+  width: 70%; /* Adjusted width for the value column */
+  word-break: break-word;
+  padding: 15px;
+  color: #fff;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.window.parsed-data th {
+  background-color: #2d2d2d;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.window.parsed-data tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+.window.parsed-data tr:hover {
+  background-color: #333;
+}
+
+.window.parsed-data td {
+  word-break: break-word;
+}
+
+/* Search filter styling */
+.search-filter {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.search-filter_ip {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.search-filter input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%; /* Full width to align with the table */
+  max-width: 300px; /* Optional: Limit maximum width */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-size: 20px;
+  background-color: #333;
+  color: #ffffff;
+}
+
+td.key {
+  font-weight: bold;
+}
+
+td.value {
+  text-align: left;
+}
+
+.window2 {
+  padding: 20px;
+  background-color: #1e1e1e; /* Darker background */
+  margin-top: 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 90%;
+  overflow: visible;
+  width: 95%;
+  color: #f0f0f0; /* Lighter text color */
+  text-align: center;
+  /* top: calc(50% + 150px); */
+}
+
+.window2 h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #f0f0f0; /* Lighter text color */
+}
+
+.window2 table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.window2 th, .window2 td {
+  padding: 15px;
+  border: 1px solid #1e1e1e; /* Lighter border color */
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.window2 th {
+  background-color: #1e1e1e; /* Darker header background */
+  color: #f0f0f0; /* Lighter text color */
+}
+
+.window2 td {
+  background-color: #2a2a2a; /* Slightly lighter row color */
+  color: #f0f0f0; /* Lighter text color */
+}
+
+.window2 tr:nth-child(even) td {
+  background-color: #1e1e1e;
+}
+
+.window2 .key {
+  width: 30%;
+  word-break: break-word;
+  padding: 15px;
+  color: #f0f0f0; /* Lighter text color */
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.window2 .value {
+  width: 70%;
+  word-break: break-word;
+  padding: 15px;
+  color: #f0f0f0; /* Lighter text color */
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.window2 tr {
+  display: flex; /* Use flexbox to control the column width */
+  flex-wrap: nowrap; /* Prevent rows from wrapping to a new line */
+}
+
+.window2 tr td.key {
+  flex: 3; /* 30% width */
+}
+
+.window2 tr td.value {
+  flex: 7; /* 70% width */
+}
+
+.window2 td[colspan] {
+  flex: 1 100%; /* Make colspan stretch the entire width */
+  max-width: 100%;
+}
+  
+  
+.fixed-bottom {
+  bottom: calc(0% + 1px);
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background-color: #1e1e1e;
+  text-align: center;
+  color: white;
+  z-index: 1000; 
+}
+
+.fixed-bottom .row {
+  display: flex;
+  justify-content: space-around; /* Evenly distribute the columns */
+  align-items: center;
+}
+
+.fixed-bottom .col {
+  flex: 1; /* Each column will take up equal space */
+  text-align: center;
+}
+
+.contributor-img {
+  border-radius: 8px;
+  width: 300px; /* Adjust size as needed */
+  height: auto;
+}
+
+.ScrollButton {
+  position: absolute;
+  top: calc(60% + 50px);
+  left: 1270px;
+  border: 2px solid #1e1e1e; /* Add a 2px solid border */
+  border-radius: 50px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.window3 {
+  padding: 20px;
+  background-color: #1e1e1e;
+  margin-top: 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 90%; /* Ensure the table doesn't exceed 90% of the viewport width */
+  overflow: visible; /* Allow horizontal scrolling */
+  width: 95%;
+  color: #f0f0f0; /* Lighter text color */
+  text-align: center;
+  }
+
+.window3 h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #f0f0f0; /* Lighter text color */
+}
+
+
+
+
+.window3 h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.styled-table thead tr {
+  background-color: #333; /* Darker header background */
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th, .styled-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #444; /* Darker border for rows */
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #444;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #2e2e2e; 
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #333;
+}
+
+.styled-table tbody tr td:first-child {
+  font-weight: bold;
+  color: #b3b3b3; 
+}
+
+.sandbox-link {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #d3d3d3; /* Light grey text color */
+  background-color: transparent;
+  border: 2px solid #d3d3d3; /* Light grey border */
+  border-radius: 25px; /* Rounded border */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sandbox-link:hover {
+  background-image: radial-gradient(circle, rgb(67, 95, 232) 0%, rgba(252, 70, 107, 1) 25%, rgba(63, 94, 251, 1) 50%, rgb(232, 78, 109) 100%);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+  color: #1c1c1c; /* Darker text color on hover */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.ResultDiv {
+  padding: 20px;
+  background: #1e1e1e; /* Darker background */
+  border-radius: 15px;
+  width: 95%;
+  max-width: 90%;
+  overflow: visible;
+  color: #f0f0f0; /* Lighter text color */
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* margin-top: 200px; */
+  top: calc(60% + 150px);
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 40px; 
+  display: block; 
+  overflow: hidden;
+}
+
+.spf-status {
+  margin-top: 10px;
+}
+
+.spf-status-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.spf-details {
+  padding-left: 20px;
+}
+
+.ResultDiv {
+  margin: 20px;
+}
+
+.result-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.App {
+  flex: 1;
+  padding: 10px;
+}

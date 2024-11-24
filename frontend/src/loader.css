@@ -1,0 +1,37 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10011; /* Ensure it's above other content */
+  }
+  
+  .loader-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .smoke {
+    position: absolute;
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    background: url('./assets/images/smoke_bg.gif') no-repeat center center; /* Cloud effect */
+    background-size: cover; /* Ensure the cloud covers the entire area */
+    z-index: 10001; /* Place behind the loader image */
+    opacity: 0.5; /* Adjust opacity if needed */
+  }
+  
+  .loader img {
+    width: 400px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    animation: rotate 1s linear infinite;
+    z-index: 10002; /* Ensure loader image is above the cloud */
+  }
+  

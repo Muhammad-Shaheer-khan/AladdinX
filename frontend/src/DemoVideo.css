@@ -1,0 +1,81 @@
+/* Popup Container */
+.demo-popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background with opacity */
+    backdrop-filter: blur(10px); /* Apply blur effect to background */
+    z-index: 1000; /* Ensure popup is above all other elements */
+  }
+  
+  /* Popup Content */
+  .demo-popup-content {
+    margin-top: -150px;
+    position: absolute;
+    background-color: #1b1b1b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+    max-height: 80%;
+    overflow: hidden;
+    /* display: flex; */
+    flex-direction: column; /* Align items vertically inside popup */
+    align-items: center;    /* Center elements inside the popup */
+    animation: rise 0.3s ease-out; /* Animation for popup appearance */
+  }
+  
+  /* Close Button */
+  .close-button {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: none;
+    /* font-size: 20px; */
+    cursor: pointer;
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 15px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Set width for proper centering */
+    height: 40px; /* Set height for proper centering */
+  }
+  
+  
+    .video-container {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    border: 4px solid transparent; /* Set border to transparent initially */
+    border-image: linear-gradient(
+      to right,
+      rgb(67, 95, 232) 0%, 
+      rgba(252,70,107,1) 25%, 
+      rgba(63,94,251,1) 50%, 
+      rgb(232, 78, 109) 100%
+    );
+    border-image-slice: 1; /* Ensure the gradient is applied to the whole border */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
+  }
+  
+  
+  /* Animation for Popup Appearance */
+  @keyframes rise {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

@@ -6,6 +6,13 @@ This versatile tool is designed to be user-friendly, making it suitable for both
 
 
 ---
+# AladdinX Demo
+
+Check out the demo video of **AladdinX**:
+
+https://github.com/Muhammad-Shaheer-khan/AladdinX/blob/09d3e11f375163c4eb17f7def1832ebdb694ee52/frontend/src/assets/AladdinX.mp4
+
+---
 
 ## 🚀 Features
 

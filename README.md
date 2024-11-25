@@ -1,4 +1,9 @@
 # AʅαԃԃιɳX - Email Header Analyzer. 🧞‍♂️
+![Sticker](https://img.shields.io/badge/Genie-Boom-blue)
+![Hacker Mode](https://img.shields.io/badge/Hacker%20Mode-Activated-brightgreen)
+![Root Access](https://img.shields.io/badge/Root-Access%20Granted-purple)
+![Phishing Protection](https://img.shields.io/badge/Phishing%20Protection-Active-blue)
+
 
 
 AladdinX is an open-source tool designed to secure both personal and organizational email communication. With a range of features like **AI-driven analysis**, **suspicious keyword detection**, and **individual parameter analysis** (including SPF, DKIM, DMARC, etc.) with detailed interpretations, **IP reputation and geolocation analysis**, **attachment analysis with sandboxing** for links, **email header parsing**, and much more, AladdinX simplifies email security. 

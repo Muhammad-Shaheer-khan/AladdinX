@@ -73,6 +73,7 @@ Follow these steps to set up AladdinX on your machine:
       - [VirusTotal](https://www.virustotal.com/gui)
       - [IPGeolocation](https://ipgeolocation.io/)
       - [Gemini](https://ai.google.dev/gemini-api/docs/api-key)
+        
     And just move to the email_analysis folder in the view.py file and paste inside the function named as "api".
 
 7. **Run the server**:

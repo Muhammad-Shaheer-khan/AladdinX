@@ -140,9 +140,6 @@ Your logo will be displayed on the front page of the email analyzer. 🌟
 
 If you like the project and want to support me, you can **buy me a coffee** via **Nayapay**! ☕
 
-💳 **Buy a Coffee**:  
-Account Name: M Shaheer khan  
-Account Number: 4782 7800 2261 9160
 
 ---
 
